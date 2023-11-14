@@ -13,10 +13,10 @@
 set -x
 
 # Set correct permissions
-chmod -R 755 selenium_test/src
+chmod -R 755 /var/jenkins_home/workspace/selenium/selenium_test/src
 
 # Set correct ownership
-chown -R www-data:www-data selenium_test/src
+chown -R www-data:www-data /var/jenkins_home/workspace/selenium/selenium_test/src
 
 # Run Docker container
 docker run -d -p 80:80 --name my-apache-php-app -v "$(pwd)/selenium_test/src:/var/www/html" php:7.2-apache
