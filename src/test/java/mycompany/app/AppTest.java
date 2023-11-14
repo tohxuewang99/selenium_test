@@ -78,7 +78,7 @@ public class AppTest
 	
 		//check result
 		By errorMsgId = By.className("error-msg");
-		String expectedResult = "Login failed"; 
+		String expectedResult = "Login failed zzz"; 
 		boolean isResultCorrect = wait.until(ExpectedConditions.textToBe(errorMsgId, expectedResult)); 
 		assertTrue(isResultCorrect == true); 
 	}
